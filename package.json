@@ -10,13 +10,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:loworem-ipsuwum.helloWorld"
+    "onCommand:loworem-ipsuwum.loworem"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [{
-      "command": "loworem-ipsuwum.helloWorld",
-      "title": "Hello World"
+      "command": "loworem-ipsuwum.loworem",
+      "title": "Loworem Ipsuwum"
     }]
   },
   "scripts": {
@@ -36,3 +36,4 @@
     "@vscode/test-electron": "^2.1.5"
   }
 }
+

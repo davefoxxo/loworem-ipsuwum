@@ -16,7 +16,7 @@ function activate(context) {
 
     let LOREM = ['loworem', 'ipsuwum', 'dowolowor', 'sit', 'amet', 'cowonsectetuwur', 'adipiscing', 'elit', 'cuwurabituwur', 'vel', 'hendrerit', 'liberowo', 'eleifend', 'blandit', 'nuwunc', 'owornare', 'owodiowo', 'uwut', 'oworci', 'gravida', 'imperdiet', 'nuwullam', 'puwuruwus', 'lacinia', 'a', 'pretiuwum', 'quwuis', 'cowonguwue', 'praesent', 'sagittis', 'laoworeet', 'auwuctowor', 'mauwuris', 'nowon', 'velit', 'erowos', 'dictuwum', 'prowoin', 'accuwumsan', 'sapien', 'nec', 'massa', 'vowoluwutpat', 'venenatis', 'sed', 'euwu', 'mowolestie', 'lacuwus', 'quwuisquwue', 'poworttitowor', 'liguwula', 'duwui', 'mowollis', 'tempuwus', 'at', 'magna', 'vestibuwuluwum', 'tuwurpis', 'ac', 'diam', 'tinciduwunt', 'id', 'cowondimentuwum', 'enim', 'sowodales', 'in', 'hac', 'habitasse', 'platea', 'dictuwumst', 'aenean', 'nequwue', 'fuwusce', 'auwuguwue', 'leowo', 'eget', 'semper', 'mattis', 'towortowor', 'scelerisquwue', 'nuwulla', 'interduwum', 'telluwus', 'malesuwuada', 'rhowoncuwus', 'poworta', 'sem', 'aliquwuet', 'et', 'nam', 'suwuspendisse', 'powotenti', 'vivamuwus', 'luwuctuwus', 'fringilla', 'erat', 'dowonec', 'juwustowo', 'vehicuwula', 'uwultricies', 'variuwus', 'ante', 'primis', 'fauwucibuwus', 'uwultrices', 'powosuwuere', 'cuwubilia', 'cuwurae', 'etiam', 'cuwursuwus', 'aliquwuam', 'quwuam', 'dapibuwus', 'nisl', 'feuwugiat', 'egestas', 'class', 'aptent', 'taciti', 'sowociowosquwu', 'ad', 'litowora', 'toworquwuent', 'per', 'cowonuwubia', 'nowostra', 'inceptowos', 'himenaeowos', 'phaselluwus', 'nibh', 'puwulvinar', 'vitae', 'uwurna', 'iacuwulis', 'lowobowortis', 'nisi', 'viverra', 'arcuwu', 'moworbi', 'pellentesquwue', 'metuwus', 'cowommowodowo', 'uwut', 'facilisis', 'felis', 'tristiquwue', 'uwullamcoworper', 'placerat', 'aenean', 'cowonvallis', 'sowollicituwudin', 'integer', 'ruwutruwum', 'duwuis', 'est', 'etiam', 'bibenduwum', 'dowonec', 'pharetra', 'vuwulpuwutate', 'maecenas', 'mi', 'fermentuwum', 'cowonsequwuat', 'suwuscipit', 'aliquwuam', 'habitant', 'senectuwus', 'netuwus', 'fames', 'quwuisquwue', 'euwuismowod', 'cuwurabituwur', 'lectuwus', 'elementuwum', 'tempowor', 'risuwus', 'cras'];
 
-    for(let i = 0; i < 10; i++) {
+    for(let i = 0; i < 8; i++) {
         LOREM.push("uwu");
         LOREM.push("owo");
         LOREM.push(":3");
@@ -25,14 +25,16 @@ function activate(context) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('loworem-ipsuwum.helloWorld', async function () {
+	let loworemCommand = vscode.commands.registerCommand('loworem-ipsuwum.loworem', async function () {
 		// The code you place here will be executed every time your command is executed
         const editor = vscode.window.activeTextEditor;
         if(!editor) return
 
-        let len = await vscode.window.showInputBox()
+        let len = await vscode.window.showInputBox({
+         prompt: "Pwease enter how many words to generate."
+        })
 
-        if(isNaN(len)) {
+        if(!len || isNaN(len)) {
 		    vscode.window.showInformationMessage('Please enter a valid number.');
             return   
         }
@@ -60,13 +62,13 @@ function activate(context) {
                 if(capitalize) {
                     loworem += LOREM[seed].charAt(0).toUpperCase();
                     loworem += LOREM[seed].slice(1);
-                    cap = false;
+                    capitalize = false;
                 } else {
                     loworem += LOREM[seed];
                 }
 
                 // Random punctuation
-                const FREQ = 15;
+                const FREQ = 12;
                 switch(seed % FREQ) {
                     case 0 || 1:
                         loworem += ",";
@@ -86,28 +88,19 @@ function activate(context) {
                     default:
                         break;
                 }
-
                 loworem += " ";
-
             }
-
         }
 
         loworem = loworem.trim();
         loworem += ".";
         
-
-
         editor.edit((selectedText) => {
             selectedText.replace(editor.selection, loworem)
         })
-
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Loworem Ipsuwum!');
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(loworemCommand);
 
 }
 
