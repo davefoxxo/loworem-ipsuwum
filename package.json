@@ -1,8 +1,8 @@
 {
   "name": "loworem-ipsuwum",
   "displayName": "Loworem Ipsuwum",
-  "description": "Desc",
-  "version": "0.0.1",
+  "description": "Lorem Ipsum text, with a twist",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.73.0"
   },

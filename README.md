@@ -1,65 +1,37 @@
-# loworem-ipsuwum README
+# loworem-ipsuwum
 
-This is the README for your extension "loworem-ipsuwum". After writing up a brief description, we recommend including the following sections.
+Have you ever generated *Lorem Ipsum* text using VSCode's Emmet, wishing that it was a bit more "interesting?"
 
-## Features
+Loworem Ipsuwum is a VSCode extention that generates *Lorem Ipsum* text with a *small* twist!
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## How to Use
 
-For example if there is an image subfolder under your extension project workspace:
+When inside VSCode,
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open Command Pallette with <kbd>CTRL / CMD</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+2. Type:
 
-## Requirements
+```cmd
+>Loworem Ipsuwum
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+3. You will be prompted to enter a number. Enter how many words long you want your text to be!
 
-## Extension Settings
+4. Lower the brightness of your laptop incase someone's peeking on your screen (OPTIONAL)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+5. Watch as your need for boring, repetitive *Lorem Ipsum* text vanishes.
 
-For example:
+## How to Install
 
-This extension contributes the following settings:
+Either simply look up `loworem ipsuwum` on the VSCode marketplace, OR:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Open Command Pallette with <kbd>CTRL / CMD</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd>.
 
-## Known Issues
+2. Type in the following command:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+```
+ext install loworem-ipsuwum
+```
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This will exactly search up this extention. Don't forget the hyphen!
