@@ -23,28 +23,34 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let loworemCommand = vscode.commands.registerCommand('loworem-ipsuwum.loworem', async function () {
-
         const editor = vscode.window.activeTextEditor;
-        if(!editor) return;
-
-        let len = await vscode.window.showInputBox({
-            prompt: "Pwease enter how many words to generate."
-        });
-
-        if(!len || isNaN(len) || len < 1) {
-		    vscode.window.showInformationMessage('Please enter a valid number.');
-            return;   
+        if(!editor) {
+		    vscode.window.showErrorMessage('Error: Must have editable editor open.');
+            return;
         }
 
-        len = len > 5000 ? 5000 : len;
+        let len = await vscode.window.showInputBox({
+            prompt: "Pwease enter how many words to generate.",
+        });
 
-        let loworem = "Loworem ipsuwum dolowor sit amet cowonsectetur adipisicing elit "
+        if((isNaN(len) && len !== "") || len < 0) {
+		    vscode.window.showErrorMessage('Please enter a valid number.');
+            return;   
+        }
+        
+        if(len === "" || len == 0) {
+            len = 30; // Default
+        } else if(len > 5000) {
+            len = 5000; // Max 5000
+        }
+
+        let loworem = "Loworem ipsuwum dolowor sit amet cowonsectetur adipisicing elit ";
 
         // Default 8 words, trimmed down to exact value
-        if(len < 8) {
+        if(len <= 8) {
             let words = loworem.split(' ');
 
-            for(let i = 8 - len; i > 1; i--) {
+            for(let i = 8 - len; i >= 0; i--) {
                 words.pop();
             }
             loworem = words.join(" ");
@@ -100,7 +106,7 @@ function activate(context) {
             loworem = loworem.substring(0, loworem.length - 2);
             loworem += ".";
 
-        } else if(char !== "!" && char !== "?" && char === ".") {
+        } else if(char !== "!" && char !== "?" && char !== ".") {
             loworem += ".";   
         }
 
