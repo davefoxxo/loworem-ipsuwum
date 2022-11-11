@@ -1,14 +1,25 @@
 {
   "name": "loworem-ipsuwum",
   "displayName": "Loworem Ipsuwum",
-  "description": "Lorem Ipsum text, with a twist",
+  "description": "Lorem Ipsum gen, with a twist",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.73.0"
   },
+  "publisher": "davefoxxo",
   "categories": [
-    "Other"
+    "Themes"
   ],
+  "author": {
+    "name": "David Kochanski",
+    "email": "kochanskidavid9@gmail.com",
+    "link": "https://github.com/davefoxxo"
+  },
+  "icon": "img/loworem-icon.png",
+  "repository": {
+    "url": "https://github.com/davefoxxo/loworem-ipsuwum",
+    "type": "git"
+  },
   "activationEvents": [
     "onCommand:loworem-ipsuwum.loworem"
   ],

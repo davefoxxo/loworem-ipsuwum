@@ -63,7 +63,7 @@ function activate(context) {
 
             for(let i = len - 8; i > 0; i--) {
 
-                let seed = Math.floor(Math.random()*LOREM.length);
+                let seed = Math.floor(Math.random() * LOREM.length);
 
                 if(capitalize) {
                     loworem += LOREM[seed].charAt(0).toUpperCase();
@@ -100,13 +100,13 @@ function activate(context) {
 
         // Trailing space and punctuation
         loworem = loworem.trim();
+        let lastChar = loworem.slice(-1);
 
-        let char = loworem.slice(-1);
-        if(char === ",") {
+        if(lastChar === ",") {
             loworem = loworem.substring(0, loworem.length - 2);
             loworem += ".";
 
-        } else if(char !== "!" && char !== "?" && char !== ".") {
+        } else if(lastChar !== "!" && lastChar !== "?" && lastChar !== ".") {
             loworem += ".";   
         }
 

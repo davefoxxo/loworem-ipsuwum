@@ -14,17 +14,17 @@ When inside VSCode,
 
 2. Type: `>Loworem Ipsuwum`
 
-![>"Loworem Ipsuwum"](Images/1.png)
+![>"Loworem Ipsuwum"](img/1.png)
 
 3. You will be prompted to enter a number. Enter how many words long you want your text to be! Or leave it blank to quickly get a default amount.
 
-!["Step 3"](Images/2.png)
+!["Step 3"](img/2.png)
 
 4. (OPTIONAL) Lower the brightness of your laptop in case someone's peeking at your screen
 
 5. Watch as your need for boring, repetitive *Lorem Ipsum* text vanishes.
 
-!["uwu"](Images/3.png)
+!["uwu"](img/3.png)
 
 ---
 
