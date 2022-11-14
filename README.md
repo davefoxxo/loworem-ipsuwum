@@ -10,17 +10,8 @@ Loworem Ipsuwum is a VSCode extention that generates *Lorem Ipsum* text with a *
 
 When inside VSCode,
 
-1) Open Command Pallette with `CTRL/CMD + SHIFT + P`.
+1. Open Command Pallette with `CTRL/CMD + SHIFT + P`.
 
-<<<<<<< HEAD
-2) Type: `>Loworem Ipsuwum` ![>"Loworem Ipsuwum"](img/1.png)
-
-3) You will be prompted to enter a number. Enter how many words long you want your text to be! Or leave it blank to quickly get a default amount. !["Step 3"](img/2.png)
-
-4) (OPTIONAL) Lower the brightness of your laptop in case someone's peeking at your screen
-
-5) Watch as your need for boring, repetitive *Lorem Ipsum* text vanishes. !["uwu"](img/3.png)
-=======
 2. Type: `>Loworem Ipsuwum` ![>"Loworem Ipsuwum"](img/1.png)
 
 3. You will be prompted to enter a number. Enter how many words long you want your text to be! Or leave it blank to quickly get a default amount. !["Step 3"](img/2.png)
