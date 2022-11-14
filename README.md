@@ -19,7 +19,6 @@ When inside VSCode,
 4. (OPTIONAL) Lower the brightness of your laptop in case someone's peeking at your screen
 
 5. Watch as your need for boring, repetitive *Lorem Ipsum* text vanishes. !["uwu"](img/3.png)
->>>>>>> 449ec37 (Readme FIX)
 
 ---
 
